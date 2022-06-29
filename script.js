@@ -17,14 +17,24 @@ for (let i = 0; i < 6; i++) {
     colBox.addEventListener('click', pickColor);
 }
 
-function draw() {
-    const color = 'blue';
-    this.style.background = color;
+let mouseDown = false;
+document.onmousedown = function() {
+    mouseDown = true;
 }
+document.onmouseup = () => mouseDown = false;
 
+let color = 'white';
 function pickColor() {
-
+    color = this.style.backgroundColor;
 }
+
+function draw() {
+    if (mouseDown) {
+        this.style.background = color;
+    }
+}
+
+
   
 function restart(){
     window.location.reload("Restart")

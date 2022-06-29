@@ -7,8 +7,35 @@ body {
     justify-content: center;
 }
 
-#container {
+#etchasketch {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    padding: 20px;
+}
+
+
+#color_picker {
     margin-top: 30px;
+    margin-right: 30px;
+    width: 150px;
+    height: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.color_box {
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+#container {
     width: 400px;
     height: 400px;
     display: flex;
@@ -19,8 +46,8 @@ body {
 }
 
 .box {
-    width: 4px;
-    height: 4px;
+    width: 8px;
+    height: 8px;
 }
 
 button {
